@@ -8,9 +8,9 @@ package com.shivang.practiceds.hash;
 public class MyHashMapV1 {
     public static final int HASH_SIZE = 256;
 
-    String[] hashMap;
+    private String[] hashMap;
 
-    int hashSize;
+    private int hashSize;
 
     public MyHashMapV1(int hashSize) {
         this.hashSize = hashSize;
