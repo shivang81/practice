@@ -1,5 +1,7 @@
 package com.shivang.practiceds.hash;
 
+import java.util.LinkedList;
+
 /**
  * Hash Map with linear probing
  *
@@ -61,7 +63,5 @@ public class MyHashMap {
         System.out.println("Map 2: " + "1     -> " + map.get("1"));
         System.out.println("Map 2: " + "111   -> " + map.get("111"));
         System.out.println("Map 2: " + "11111 -> " + map.get("11111"));
-
-
     }
 }
