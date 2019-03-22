@@ -6,26 +6,22 @@ import java.util.LinkedList;
  * Graph Traversals
  * Created by shivanggupta on 05/01/17.
  */
-class Graph
-{
+class Graph {
     private int V;
     private LinkedList<Integer>[] adj;
 
-    Graph(int v)
-    {
+    Graph(int v) {
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; ++i)
             adj[i] = new LinkedList<Integer>();
     }
 
-    void addEdge(int v,int w)
-    {
+    void addEdge(int v,int w) {
         adj[v].add(w);
     }
 
-    void BFS(int s)
-    {
+    void BFS(int s) {
         boolean visited[] = new boolean[V];
 
         LinkedList<Integer> queue = new LinkedList<Integer>();
@@ -33,8 +29,7 @@ class Graph
         visited[s]=true;
         queue.add(s);
 
-        while (queue.size() != 0)
-        {
+        while (queue.size() != 0) {
             s = queue.poll();
             System.out.print(s+" ");
 
@@ -47,8 +42,7 @@ class Graph
         }
     }
 
-    void DFSUtil(int v,boolean visited[])
-    {
+    void DFSUtil(int v,boolean visited[]) {
         visited[v] = true;
         System.out.print(v+" ");
 
@@ -58,15 +52,13 @@ class Graph
         }
     }
 
-    void DFS(int v)
-    {
+    void DFS(int v) {
         boolean visited[] = new boolean[V];
 
         DFSUtil(v, visited);
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Graph g = new Graph(4);
 
         g.addEdge(0, 1);
